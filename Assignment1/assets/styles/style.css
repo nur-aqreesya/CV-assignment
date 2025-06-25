@@ -404,8 +404,6 @@ section {
     .intro-text h2 { font-size: 24px; }
     .intro-text h5 { font-size: 16px; }
     .intro-text p { font-size: 14px; }
-
-   #cv-content { display: none; }
   
     #cv-content section,
     #cv-content .timeline-item,
@@ -446,6 +444,18 @@ body.dark-mode .cv-table td {
 .dark-header {
   background-image: url(../images/header2.PNG);
   background-color: #333;
+}
+
+
+body.dark-mode .social-icons a {
+    background-color: #333333 !important; /* Change the white background of social icons to dark */
+}
+
+
+/* Ensure the .site-footer also has a strong dark background in dark mode */
+body.dark-mode .site-footer {
+    background-color: #1a1a1a !important; /* Match header or other dark sections */
+    color: #f5f5f5 !important;
 }
 
 body.dark-mode #about-section {

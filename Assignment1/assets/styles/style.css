@@ -407,7 +407,7 @@ section {
     .intro-text p { font-size: 14px; }
 }
   #cv-content {
-    display: block !important;
+    display: none;
   }
 
   #cv-content section,

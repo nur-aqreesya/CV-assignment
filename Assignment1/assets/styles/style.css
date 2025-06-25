@@ -242,8 +242,8 @@ section {
 }
 
 #experience-section {
-    margin-top: 150px;
-    margin-bottom: 200px;
+    margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 .cv-table th {
@@ -376,12 +376,26 @@ section {
   background-color: #004080;
 }
 
+@media print {
+  html, body {
+    height: auto !important;
+  }
+}
+
 #cv-content {
   display: block !important;
   position: relative;
   z-index: 9999;
   background-color: white;
 }
+
+#cv-content section,
+#cv-content .timeline-item,
+#cv-content .cv-table,
+#cv-content .contact-container,
+#cv-content .site-footer {
+  page-break-inside: avoid;
+  break-inside: avoid;
 
 #cv-content .site-footer {
   margin-top: 50px;

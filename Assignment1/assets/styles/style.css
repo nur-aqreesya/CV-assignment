@@ -377,13 +377,35 @@ section {
 }
 
 @media print {
-  html, body {
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-  }
-
+    .header-top {
+        height: auto !important; /* Allow height to adjust to content */
+        background-image: none !important; /* Remove the background image for print */
+        background-color: #ffffff !important; /* Or a light color for readability */
+        padding: 50px 20px !important; /* Adjust padding if needed */
+    }
+    .intro-box {
+        background-color: transparent !important; /* Make intro box background transparent */
+        box-shadow: none !important; /* Remove shadows for print */
+        width: 100% !important; /* Allow it to span full width */
+        max-width: 700px !important; /* Or a suitable max-width for A4 */
+    }
+    .intro-content {
+        flex-direction: column !important; /* Stack image and text vertically for cleaner print */
+    }
+    .intro-image,
+    .intro-text {
+        width: 100% !important; /* Make them take full width when stacked */
+        padding: 10px 0 !important; /* Adjust padding */
+    }
+    .intro-image img {
+        object-fit: contain !important; /* Ensure the image isn't cropped */
+        max-height: 250px !important; /* Limit height to prevent image from being too large */
+    }
+    /* Add this to adjust font sizes slightly for print if needed */
+    .intro-text h2 { font-size: 24px; }
+    .intro-text h5 { font-size: 16px; }
+    .intro-text p { font-size: 14px; }
+}
   #cv-content {
     display: block !important;
   }

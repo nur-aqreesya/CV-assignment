@@ -448,13 +448,11 @@ body.dark-mode .cv-table td {
 
 
 body.dark-mode .social-icons a {
-    background-color: #333333 !important; /* Change the white background of social icons to dark */
+    background-color: #333333 !important;
 }
 
-
-/* Ensure the .site-footer also has a strong dark background in dark mode */
 body.dark-mode .site-footer {
-    background-color: #1a1a1a !important; /* Match header or other dark sections */
+    background-color: #1a1a1a !important; 
     color: #f5f5f5 !important;
 }
 

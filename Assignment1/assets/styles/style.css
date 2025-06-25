@@ -377,7 +377,10 @@ section {
 }
 
 #cv-content {
-  display: none;
+  display: block !important;
+  position: relative;
+  z-index: 9999;
+  background-color: white;
 }
 
 #cv-content .site-footer {

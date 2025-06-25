@@ -16,12 +16,13 @@ document.getElementById("downloadCV").addEventListener("click", function () {
 
   Promise.all(imageLoadPromises).then(() => {
     const opt = {
-      margin: 0,
-      filename: "esya-cv.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
-    };
+  margin: [0.5, 0.5], 
+  filename: "esya-cv.pdf",
+  image: { type: "jpeg", quality: 0.98 },
+  html2canvas: { scale: 2, useCORS: true },
+  jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+  pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+};
 
     html2pdf().set(opt).from(cvElement).save().then(() => {
       cvElement.style.display = "none"; // Hide after download

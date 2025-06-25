@@ -384,10 +384,14 @@ section {
         padding: 50px 20px !important; /* Adjust padding if needed */
     }
     .intro-box {
-        background-color: transparent !important; /* Make intro box background transparent */
-        box-shadow: none !important; /* Remove shadows for print */
-        width: 100% !important; /* Allow it to span full width */
-        max-width: 700px !important; /* Or a suitable max-width for A4 */
+        /* ... other print styles ... */
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+    /* You might want to do this for other elements with shadows/borders too */
+    .social-icons a {
+        box-shadow: none !important;
+        border-radius: 0 !important;
     }
     .intro-content {
         flex-direction: column !important; /* Stack image and text vertically for cleaner print */
